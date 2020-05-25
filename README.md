@@ -10,10 +10,10 @@
  
  ## Demo Images
  ### Landing Page
- ![Landing Page](/wwwroot/Images/LandingPage.png)
+ ![](/wwwroot/images/LandingPage.png)
  ### User Registration
- ![User Registration](/wwwroot/images/UserReg.png)
+ ![](/wwwroot/images/UserReg.png)
   ### Create Event
-  ![Create Event](/wwwroot/images/CreateEvent.png)
+  ![](/wwwroot/images/CreateEvent.png)
    ### View Events
-   ![View Events](/wwwroot/images/ViewEvents.png)
+   ![](/wwwroot/images/ViewEvents.png)
