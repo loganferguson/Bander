@@ -10,10 +10,10 @@
  
  ## Demo Images
  ### Landing Page
- ![](https://www.github.com/loganferguson/Bander/LandingPage.png)
+ ![](https://github.com/loganferguson/Bander/LandingPage.png)
  ### User Registration
- ![](/wwwroot/images/UserReg.png)
+ ![](https://github.com/loganferguson/Bander/UserReg.png)
   ### Create Event
-  ![](/wwwroot/images/CreateEvent.png)
+  ![](https://github.com/loganferguson/Bander/EventCreate.png)
    ### View Events
-   ![](/wwwroot/images/ViewEvents.png)
+   ![](https://github.com/loganferguson/Bander/EventsView.png)
