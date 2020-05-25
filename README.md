@@ -2,7 +2,7 @@
 
 ## Functionality
 
- - Users can post their own events on Bander (shows, benefits, rehearsals, audtitions, workshops, open jam sessions, and more.)
+ - Users can post their own events on Bander (shows, benefits, rehearsals, auditions, workshops, open jam sessions, and more.)
  
  - Users are able to search and view all events in their area simply by entering a zipcode. 
  
