@@ -1,0 +1,88 @@
+﻿@inject SignInManager<IdentityUser> signInManager;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bander</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    <link href="~/Content/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/css/all.min.css" />
+    
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" style="font-family: 'Inconsolata', monospace;" asp-area="" asp-controller="Main" asp-action="Index">bander</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse flex-grow-1">
+                    @if (signInManager.IsSignedIn(User))
+                    {
+                        <form class="float-left" method="get" asp-action="EventsView" asp-controller="Main">
+                            <div class="form-inline py-0">
+                                
+                                <input name="zip" class="form-control mr-1" placeholder="Enter zipcode..." />
+                                <input type="submit" class="btn btn-light" value="Go" />
+                            </div>
+                        </form>
+                    }
+                    <ul class="navbar-nav ml-auto">
+                        @if (signInManager.IsSignedIn(User))
+                        {
+
+                            <li class="nav-item">
+                                <form method="get" asp-action="CreateEvent" asp-controller="Event">
+                                    <button type="submit" class="btn py-0 text-dark" style="width:auto;">
+                                        <i class="fas fa-plus px-1" style="vertical-align:middle"></i>event
+                                    </button>
+                                </form>
+                            </li>
+                            <li id="navLogin" class="nav-item">
+                                <form method="post" asp-action="logout" asp-controller="Account">
+                                    <button type="submit" class="nav-link btn btn-link py-0" style="width:auto;">
+                                        logout @User.Identity.Name
+                                    </button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Account" asp-action="Register">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Sign In</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" style="padding-bottom:50px;">
+        <main>
+            @RenderBody()
+        </main>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            &copy; 2020 - Bander
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

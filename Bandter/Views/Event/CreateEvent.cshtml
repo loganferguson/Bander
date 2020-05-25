@@ -1,0 +1,75 @@
+﻿@model Bandter.Models.Event
+@{
+    ViewData["Title"] = "CreateEvent";
+}
+<div class="row">
+    <div class="col-md-8 offset-2">
+        
+        <form method="post" id="AccountForm">
+            <h1>Create Event</h1>
+            <hr />
+            <div class="row">
+                <div class="col-8">
+                    <div class="form-group">
+                        <label>Event Title</label>
+                        <input class="form-control" type="text" name="eventTitle" />
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input class="form-control datepicker text-box single-line" data-val="true" data-val-date="The field must be a date."
+                               data-val-required="The date field is required." id="date" name="eventDate" type="datetime" value="" />
+                    </div>
+                </div>
+            </div>
+
+            <label>Description</label>
+            <textarea style="height:200px;" class="form-control text-body" name="eventDescription" placeholder="Describe your event here."></textarea>
+            <hr />
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Street</label>
+                        <input class="form-control" type="text" name="locationStreet" placeholder="128 Music Ave." />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>City</label>
+                        <input class="form-control" type="text" name="locationCity" placeholder="Nashville" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>State</label>
+                        <input class="form-control" type="text" name="locationState" placeholder="Tennessee" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Zipcode</label>
+                        <input class="form-control" type="text" name="locationZip" placeholder="32210" />
+                    </div>
+                </div>           
+            </div>
+            <input type="submit" class="btn btn-primary" />
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/Content/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script>
+        $(function () {
+            $(".datepicker").datepicker({
+                dateFormat: "mm/dd/yy"
+            });
+        });
+    </script>
+}
+
