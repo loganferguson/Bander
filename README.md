@@ -1,4 +1,5 @@
 # Bander - web application for music communities.
+(Using ASP.NET MVC, C#, SQL Server)
 
 ## Functionality
 
