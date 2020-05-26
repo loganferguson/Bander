@@ -8,7 +8,12 @@
  
  - Users can RSVP to events and see how many other users have already RSVP'd. 
  
- ## Demo Images
- 
- ###Create Event
+## Demo Images
+### Landing Page
+  ![](https://raw.githubusercontent.com/loganferguson/Bander/master/LandingPage.png)
+### User Registration
+   ![](https://raw.githubusercontent.com/loganferguson/Bander/master/UserReg.png)
+### Create Event
 ![](https://raw.githubusercontent.com/loganferguson/Bander/master/EventCreate.png)
+### View Events
+![](https://raw.githubusercontent.com/loganferguson/Bander/master/EventsView.png)
